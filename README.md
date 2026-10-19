@@ -9,11 +9,12 @@
 <a href="https://github.com/muhammad-fiaz/bzip2.zig/pulls"><img src="https://img.shields.io/github/issues-pr/muhammad-fiaz/bzip2.zig" alt="GitHub pull requests"></a>
 <a href="https://github.com/muhammad-fiaz/bzip2.zig"><img src="https://img.shields.io/github/last-commit/muhammad-fiaz/bzip2.zig" alt="GitHub last commit"></a>
 <a href="https://github.com/muhammad-fiaz/bzip2.zig"><img src="https://img.shields.io/github/license/muhammad-fiaz/bzip2.zig" alt="License"></a>
-<a href="https://github.com/muhammad-fiaz/bzip2.zig/actions/workflows/ci.yml"><img src="https://img.shields.io/github/actions/workflow/status/muhammad-fiaz/bzip2.zig/ci.yml/badge.svg" alt="CI"></a>
+<a href="https://github.com/muhammad-fiaz/bzip2.zig/actions/workflows/ci.yml"><img src="https://img.shields.io/github/actions/workflow/status/muhammad-fiaz/bzip2.zig/ci.yml?label=CI" alt="CI"></a>
 <img src="https://img.shields.io/badge/platforms-linux%20%7C%20windows%20%7C%20macos-blue" alt="Supported Platforms">
 <a href="https://github.com/muhammad-fiaz/bzip2.zig/releases/latest"><img src="https://img.shields.io/github/v/release/muhammad-fiaz/bzip2.zig?label=Latest%20Release&style=flat-square" alt="Latest Release"></a>
 <a href="https://pay.muhammadfiaz.com"><img src="https://img.shields.io/badge/Sponsor-pay.muhammadfiaz.com-ff69b4?style=flat&logo=heart" alt="Sponsor"></a>
 <a href="https://github.com/sponsors/muhammad-fiaz"><img src="https://img.shields.io/badge/Sponsor-GitHub-pink?style=social&logo=github" alt="GitHub Sponsors"></a>
+<a href="https://hits.sh/github.com/muhammad-fiaz/bzip2.zig/"><img alt="Hits" src="https://hits.sh/github.com/muhammad-fiaz/bzip2.zig.svg"></a>
 
 <p><em>A native BZip2 compression and decompression library for Zig.</em></p>
 
@@ -135,9 +136,6 @@ zig build -Dtarget=x86-windows
 
 ### Method 1: Zig Fetch (Stable Release, Recommended)
 
-Install the tagged release. Note that tags carry no `v` prefix: the current
-release is `0.0.1`.
-
 ```bash
 zig fetch --save https://github.com/muhammad-fiaz/bzip2.zig/archive/refs/tags/0.0.1.tar.gz
 ```
@@ -150,15 +148,7 @@ Use this to follow the main branch:
 zig fetch --save git+https://github.com/muhammad-fiaz/bzip2.zig.git
 ```
 
-### Method 3: Zig Fetch (Long-Term Stable, Zip Archive)
-
-Same `0.0.1` release as a zip download:
-
-```bash
-zig fetch --save https://github.com/muhammad-fiaz/bzip2.zig/archive/refs/tags/0.0.1.zip
-```
-
-### Method 4: Manual `build.zig.zon` Configuration
+### Method 3: Manual `build.zig.zon` Configuration
 
 ```zig
 .dependencies = .{
@@ -169,7 +159,7 @@ zig fetch --save https://github.com/muhammad-fiaz/bzip2.zig/archive/refs/tags/0.
 },
 ```
 
-### Method 5: Local Source Checkout
+### Method 4: Local Source Checkout
 
 ```bash
 git clone https://github.com/muhammad-fiaz/bzip2.zig.git

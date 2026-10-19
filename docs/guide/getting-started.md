@@ -10,8 +10,7 @@ and no C library to link.
 
 ## Add the dependency
 
-Install the tagged release. Tags carry no `v` prefix; the current release is
-`0.0.1`:
+Install the tagged release:
 
 ```bash
 zig fetch --save https://github.com/muhammad-fiaz/bzip2.zig/archive/refs/tags/0.0.1.tar.gz

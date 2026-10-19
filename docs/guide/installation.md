@@ -11,8 +11,7 @@ Zig 0.17.0. Older toolchains will not compile it, and the build file declares
 
 ## Add the package
 
-Install the tagged release. Tags carry no `v` prefix; the current release is
-`0.0.1`:
+Install the tagged release:
 
 ```bash
 zig fetch --save https://github.com/muhammad-fiaz/bzip2.zig/archive/refs/tags/0.0.1.tar.gz
