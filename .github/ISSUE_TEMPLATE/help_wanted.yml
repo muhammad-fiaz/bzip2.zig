@@ -1,0 +1,37 @@
+name: Help Wanted / Question
+description: Ask a question or request guidance regarding bzip2.zig
+title: "[Question]: "
+labels: ["question", "triage"]
+assignees:
+  - muhammad-fiaz
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Need help using **bzip2.zig** in your project? Please check the [Documentation](https://muhammad-fiaz.github.io/bzip2.zig/) first, or ask your question below!
+  - type: textarea
+    id: question
+    attributes:
+      label: Question / Guidance
+      description: What do you need assistance with?
+      placeholder: How do I cap the output size when decompressing untrusted input?
+    validations:
+      required: true
+  - type: textarea
+    id: context
+    attributes:
+      label: Context & Code Snippet
+      description: Include any relevant Zig code or build configuration.
+      render: zig
+    validations:
+      required: false
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Code of Conduct & Contribution Guidelines
+      description: By submitting this question, you agree to follow our [Code of Conduct](https://github.com/muhammad-fiaz/bzip2.zig/blob/main/CODE_OF_CONDUCT.md).
+      options:
+        - label: I agree to follow this project's Code of Conduct
+          required: true
+        - label: I have reviewed the documentation before opening this question
+          required: true

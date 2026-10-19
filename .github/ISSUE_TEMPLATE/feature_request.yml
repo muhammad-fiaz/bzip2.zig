@@ -1,0 +1,44 @@
+name: Feature Request
+description: Suggest an idea, enhancement, or optimization for bzip2.zig
+title: "[Feature]: "
+labels: ["enhancement", "triage"]
+assignees:
+  - muhammad-fiaz
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Have an idea or optimization proposal for **bzip2.zig**? We would love to hear it!
+  - type: textarea
+    id: pitch
+    attributes:
+      label: Feature Description
+      description: A clear and concise description of the feature, optimization, or API enhancement.
+      placeholder: I would like to propose ...
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem Statement / Motivation
+      description: Is your feature request related to a specific problem, architecture, or performance bottleneck?
+      placeholder: I'm trying to compress streaming network packets where ...
+    validations:
+      required: false
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives Considered
+      description: Any alternative solutions or workarounds you have considered.
+    validations:
+      required: false
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Code of Conduct & Contribution Guidelines
+      description: By submitting this feature request, you agree to follow our [Code of Conduct](https://github.com/muhammad-fiaz/bzip2.zig/blob/main/CODE_OF_CONDUCT.md).
+      options:
+        - label: I agree to follow this project's Code of Conduct
+          required: true
+        - label: I have searched existing issues and discussions to verify this feature hasn't been requested already
+          required: true

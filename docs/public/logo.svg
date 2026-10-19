@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="bzip2.zig">
+  <title>bzip2.zig</title>
+
+  <defs>
+    <linearGradient id="bzip2-panel" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#020617"/>
+    </linearGradient>
+    <linearGradient id="bzip2-bar" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#fbbf24"/>
+      <stop offset="100%" stop-color="#f97316"/>
+    </linearGradient>
+    <linearGradient id="bzip2-accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="100%" stop-color="#0284c7"/>
+    </linearGradient>
+  </defs>
+
+  <rect x="16" y="16" width="480" height="480" rx="96" fill="url(#bzip2-panel)" stroke="#1e293b" stroke-width="6"/>
+
+  <!-- Sorted blocks. BZip2 splits the input into blocks, sorts the rotations of
+       each one and codes the result, so a descending run of bars is what the
+       format actually looks like once the transform has run. -->
+  <g fill="url(#bzip2-bar)">
+    <rect x="96" y="150" width="320" height="44" rx="22"/>
+    <rect x="96" y="234" width="228" height="44" rx="22"/>
+    <rect x="96" y="318" width="132" height="44" rx="22"/>
+  </g>
+
+  <!-- The BZh header every stream starts with. -->
+  <rect x="96" y="398" width="120" height="12" rx="6" fill="url(#bzip2-accent)"/>
+</svg>

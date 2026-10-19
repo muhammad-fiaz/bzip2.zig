@@ -1,0 +1,11 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Documentation
+    url: https://muhammad-fiaz.github.io/bzip2.zig/
+    about: Read the bzip2.zig documentation, guides, API reference, and examples.
+  - name: GitHub Discussions
+    url: https://github.com/muhammad-fiaz/bzip2.zig/discussions
+    about: Ask questions, share ideas, and discuss native BZip2 in Zig.
+  - name: Security Advisories
+    url: https://github.com/muhammad-fiaz/bzip2.zig/security/advisories/new
+    about: Please report security vulnerabilities privately according to SECURITY.md.

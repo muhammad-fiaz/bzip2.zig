@@ -1,0 +1,16 @@
+{
+  "name": "bzip2-zig-docs",
+  "version": "0.1.0",
+  "description": "Documentation for bzip2.zig, a native Zig implementation of the BZip2 format",
+  "scripts": {
+    "dev": "vitepress dev",
+    "build": "vitepress build",
+    "preview": "vitepress preview",
+    "docs:dev": "vitepress dev",
+    "docs:build": "vitepress build",
+    "docs:preview": "vitepress preview"
+  },
+  "devDependencies": {
+    "vitepress": "^1.6.4"
+  }
+}

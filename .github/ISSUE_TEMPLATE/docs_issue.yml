@@ -1,0 +1,42 @@
+name: Documentation Issue
+description: Report errors, typos, or missing guides in bzip2.zig documentation
+title: "[Docs]: "
+labels: ["documentation", "triage"]
+assignees:
+  - muhammad-fiaz
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Found an issue with the [bzip2.zig documentation](https://muhammad-fiaz.github.io/bzip2.zig/)? Please let us know!
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: What is wrong, outdated, or missing in the documentation?
+      placeholder: The guide or API reference for ... needs updating because ...
+    validations:
+      required: true
+  - type: input
+    id: url
+    attributes:
+      label: Affected URL
+      description: Link to the documentation page with the issue
+      placeholder: https://muhammad-fiaz.github.io/bzip2.zig/guide/getting-started
+    validations:
+      required: false
+  - type: textarea
+    id: suggestion
+    attributes:
+      label: Suggested Improvement
+      description: How should this documentation page or code example be updated?
+    validations:
+      required: false
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Code of Conduct & Contribution Guidelines
+      description: By submitting this documentation issue, you agree to follow our [Code of Conduct](https://github.com/muhammad-fiaz/bzip2.zig/blob/main/CODE_OF_CONDUCT.md).
+      options:
+        - label: I agree to follow this project's Code of Conduct
+          required: true

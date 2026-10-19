@@ -1,0 +1,40 @@
+# Zig build artifacts
+.zig-cache/
+zig-cache/
+zig-out/
+.zig-cache-h/
+
+# Whole-file helper staging leftovers after interrupted runs
+*.bzip2-partial
+
+# Documentation site
+docs/.vitepress/dist/
+docs/.vitepress/cache/
+docs/.vitepress/.temp/
+docs/.vitepress/.server/
+
+# Node dependencies
+node_modules/
+docs/node_modules/
+
+# Example scratch files
+example-scratch/
+
+# Editor and IDE directories
+.vscode/
+.idea/
+.cache/
+*.swp
+*.swo
+*~
+
+# Operating system artifacts
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+Thumbs.db
+ehthumbs.db
+desktop.ini
+$RECYCLE.BIN/

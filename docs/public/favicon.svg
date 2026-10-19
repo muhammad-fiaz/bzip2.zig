@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-label="bzip2.zig">
+  <defs>
+    <linearGradient id="panel" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#020617"/>
+    </linearGradient>
+    <linearGradient id="mark" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="100%" stop-color="#0284c7"/>
+    </linearGradient>
+    <linearGradient id="block" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fbbf24"/>
+      <stop offset="100%" stop-color="#f97316"/>
+    </linearGradient>
+  </defs>
+
+  <rect x="2" y="2" width="60" height="60" rx="14" fill="url(#panel)" stroke="#1e293b" stroke-width="1.5"/>
+
+  <!-- Three sorted blocks, longest first: the block-sorting stage. -->
+  <g fill="url(#block)">
+    <rect x="12" y="16" width="40" height="7" rx="3.5"/>
+    <rect x="12" y="28" width="27" height="7" rx="3.5"/>
+    <rect x="12" y="40" width="15" height="7" rx="3.5"/>
+  </g>
+
+  <!-- The stream header every bzip2 file starts with. -->
+  <text x="32" y="55" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="13" font-weight="700" fill="url(#mark)">BZ</text>
+</svg>
