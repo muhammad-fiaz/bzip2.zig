@@ -67,7 +67,7 @@ pub fn main(init: std.process.Init) !void {
     dir.deleteFile(io, source) catch {};
     dir.deleteFile(io, archive) catch {};
     dir.deleteFile(io, restored) catch {};
-    dir.deleteDir(io, work) catch {};
+    dir.deleteTree(io, work) catch {};
 }
 
 fn mebibytesPerSecond(bytes: u64, nanoseconds: i96) f64 {
@@ -149,7 +149,10 @@ fn tempDir(gpa: std.mem.Allocator, environ: std.process.Environ, name: []const u
             gpa.free(base);
         } else |_| {}
     }
-    return gpa.dupe(u8, ".");
+    // Fall back to a scratch dir beside the executable's working directory.
+    // A bare "." cannot be deleted on POSIX (unlinkat rejects a trailing
+    // "." component), so the name always has a real component.
+    return std.fmt.allocPrint(gpa, "bzip2-example-{s}", .{name});
 }
 
 fn join(gpa: std.mem.Allocator, dir_path: []const u8, name: []const u8) ![]u8 {
