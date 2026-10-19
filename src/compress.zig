@@ -735,20 +735,20 @@ test "a reused compressor produces identical output" {
     defer gpa.free(input);
 
     var runs: [2][]u8 = undefined;
+    var count: usize = 0;
+    defer for (0..count) |j| gpa.free(runs[j]);
+
     for (0..2) |i| {
         var sink: std.Io.Writer.Allocating = .init(gpa);
         defer sink.deinit();
         try compressor.write(&sink.writer, input);
         try compressor.finish(&sink.writer);
         runs[i] = try sink.toOwnedSlice();
-        defer gpa.free(runs[i]);
+        count = i + 1;
         compressor.reset();
     }
-    if (!std.mem.eql(u8, runs[0], runs[1])) {
-        std.debug.print("reused compressor produced {d} then {d} bytes\n", .{ runs[0].len, runs[1].len });
-        return error.ReuseMismatch;
-    }
-    try testing.expect(runs[0].len > 0);
+    try testing.expectEqual(runs[0].len, runs[1].len);
+    try testing.expectEqualSlices(u8, runs[0], runs[1]);
 }
 
 test "chunked writes produce the same stream as one large write" {
@@ -862,10 +862,6 @@ test "the declared bound is a true upper bound on the output" {
             defer gpa.free(compressed);
             const bound = try @import("bzip2.zig").maxCompressedSize(input.len, @intCast(level));
             if (compressed.len > bound) {
-                std.debug.print(
-                    "level {d}: produced {d} bytes, bound was {d}\n",
-                    .{ level, compressed.len, bound },
-                );
                 return error.BoundTooSmall;
             }
         }
