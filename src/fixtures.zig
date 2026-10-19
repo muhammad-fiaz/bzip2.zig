@@ -229,9 +229,6 @@ test "every embedded fixture decompresses to its recorded plaintext" {
         var digest: [32]u8 = undefined;
         std.crypto.hash.sha2.Sha256.hash(restored, &digest, .{});
         const got = hexDigest(digest);
-        if (!std.mem.eql(u8, fixture.plaintext_sha256, &got)) {
-            std.debug.print("fixture {s}: hash {s}\n", .{ fixture.name, &got });
-        }
         try testing.expectEqualStrings(fixture.plaintext_sha256, &got);
     }
 }

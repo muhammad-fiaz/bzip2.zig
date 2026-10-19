@@ -518,7 +518,6 @@ fn expectSafeResult(gpa: Allocator, stream: []const u8, limit: usize) !void {
     };
     defer gpa.free(restored);
     if (restored.len > limit) {
-        std.debug.print("damaged stream produced {d} bytes, limit was {d}\n", .{ restored.len, limit });
         return error.OutputTooLarge;
     }
 }
@@ -616,7 +615,6 @@ test "malformed streams are rejected rather than mis-decoded" {
     for (cases) |case| {
         if (decodeToSlice(gpa, case.bytes, .{})) |restored| {
             gpa.free(restored);
-            std.debug.print("malformed case '{s}' decoded successfully\n", .{case.name});
             return error.MalformedStreamAccepted;
         } else |err| {
             // Every rejection has to be one of the documented parse errors, not
@@ -635,7 +633,6 @@ test "malformed streams are rejected rather than mis-decoded" {
                 error.UnexpectedEndOfStream,
                 => {},
                 else => {
-                    std.debug.print("malformed case '{s}' reported {s}\n", .{ case.name, @errorName(err) });
                     return err;
                 },
             }
@@ -690,12 +687,6 @@ fn expectTruncatedRefused(
         defer sink.deinit();
         var source = std.Io.Reader.fixed(stream[0..cut]);
         if (decoder.stream(&source, &sink.writer)) {
-            const restored = try sink.toOwnedSlice();
-            defer gpa.free(restored);
-            std.debug.print("a {d} byte prefix of a {d} byte stream decoded successfully\n", .{
-                cut,
-                stream.len,
-            });
             return error.TruncatedStreamAccepted;
         } else |_| {}
     }

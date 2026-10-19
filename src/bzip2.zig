@@ -542,7 +542,6 @@ test "every input shape round trips at the default level" {
         const input = try shape.build(gpa);
         defer gpa.free(input);
         expectRoundTrip(gpa, input, 9) catch |err| {
-            std.debug.print("shape '{s}' failed at level 9: {s}\n", .{ shape.name, @errorName(err) });
             return err;
         };
     }
@@ -554,13 +553,8 @@ test "every input shape round trips at every level" {
         const input = try shape.build(gpa);
         defer gpa.free(input);
         for (1..10) |level| {
-            expectRoundTrip(gpa, input, @intCast(level)) catch |err| {
-                std.debug.print("shape '{s}' failed at level {d}: {s}\n", .{
-                    shape.name,
-                    level,
-                    @errorName(err),
-                });
-                return err;
+            expectRoundTrip(gpa, input, @intCast(level)) catch {
+                return error.RoundTripFailed;
             };
         }
     }
