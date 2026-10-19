@@ -1,6 +1,6 @@
 ---
 layout: home
-title: bzip2.zig — The Pure-Zig BZip2 Codec
+title: A native BZip2 compression and decompression implementation written in Zig
 titleTemplate: false
 description: "The pure-Zig BZip2 codec: standard .bz2 files in and out, zero dependencies, no C library, caller-owned memory and I/O, and CRC verification on every stream."
 keywords: bzip2.zig, zig bzip2, pure-zig compression, .bz2, native codec
