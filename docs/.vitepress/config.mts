@@ -22,7 +22,10 @@ export default defineConfig({
   cleanUrls: false,
 
   sitemap: {
-    hostname: "https://muhammad-fiaz.github.io/bzip2.zig",
+    // Consists of the canonical site URL with a trailing slash: each page URL
+    // is resolved against it, and without the slash the last path segment is
+    // dropped from every subpage.
+    hostname: `${SITE_URL}/`,
   },
 
   head: [
