@@ -1,4 +1,10 @@
-﻿# Decompression
+﻿---
+title: Decompression
+description: Decode .bz2 data with one-shot calls, caller-owned buffers, CRC verification, and output caps for untrusted input.
+keywords: zig bzip2 decompression, decompress, max_output_size, crc verification, untrusted input
+---
+
+# Decompression
 
 ## The basic call
 

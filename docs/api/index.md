@@ -1,3 +1,9 @@
+---
+title: API Reference
+description: "The bzip2.zig surface: one-shot functions, streaming compressor and decoder types, file helpers, options, constants, and errors."
+keywords: bzip2.zig api, zig compression api, reference, entry points
+---
+
 # API Reference
 
 The module exposes one-shot functions, streaming types, whole-file helpers, and

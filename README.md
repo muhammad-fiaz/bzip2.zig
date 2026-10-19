@@ -25,10 +25,9 @@
 
 </div>
 
-`bzip2.zig` is a complete implementation of the BZip2 format for Zig. It reads and
-writes ordinary `.bz2` files, has no dependencies, links no C library, and never
-reaches for a global allocator or a global file handle. Every entry point takes
-the allocator and the I/O it needs from the caller.
+`bzip2.zig` is the pure-Zig codec for the BZip2 format. It reads and writes
+standard `.bz2` files with no dependencies and no C library, and it keeps no
+hidden state: every call takes its allocator and its I/O from the caller.
 
 > [!TIP]
 > If you build with bzip2.zig, make sure to give it a star.

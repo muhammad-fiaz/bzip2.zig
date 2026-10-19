@@ -1,3 +1,9 @@
+---
+title: Decoder Semantics
+description: Statistics, CRC verification on and off, and how bzip2.zig reports corruption and truncation instead of guessing.
+keywords: decoder semantics, crc verification, truncated stream, corruption, statistics
+---
+
 # Decoder Semantics
 
 Statistics, CRC verification on and off, and how corruption and truncation are

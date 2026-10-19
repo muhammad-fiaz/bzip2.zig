@@ -1,3 +1,9 @@
+---
+title: Installation
+description: Add bzip2.zig to a Zig project with zig fetch, pin the stable tag or follow the main branch, and wire it into build.zig.zon.
+keywords: zig fetch, build.zig.zon, zig package, add dependency, install bzip2
+---
+
 # Installation
 
 ## Requirements

@@ -1,3 +1,9 @@
+---
+title: Examples
+description: Ten runnable programs covering one-shot calls, streaming pipelines, file handling, and decoder behaviour — each compiled and run by the build.
+keywords: bzip2 examples, zig example programs, demo, runnable
+---
+
 # Examples
 
 Ten runnable programs live in the `examples` directory of the repository.

@@ -1,3 +1,9 @@
+---
+title: Errors
+description: Every error bzip2.zig can return — from CrcMismatch to UnexpectedEndOfStream — and what each one says about the input.
+keywords: bzip2 errors, crc mismatch, unexpected end of stream, invalid header, output too large
+---
+
 # Errors
 
 Every failure that concerns the stream has its own error. A caller can tell a

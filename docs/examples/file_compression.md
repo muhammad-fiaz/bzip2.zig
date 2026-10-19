@@ -1,3 +1,9 @@
+---
+title: File Compression
+description: Compress and restore a file with atomic staging, then see exactly what the failure path leaves behind.
+keywords: file compression example, atomic staging, failure handling, zig files
+---
+
 # File Compression
 
 Compresses a file, decompresses it back, and shows what the failure path does

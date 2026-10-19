@@ -1,4 +1,10 @@
-﻿# Compress and Decompress
+﻿---
+title: Compress and Decompress
+description: One-shot compress and decompress functions, whole-file helpers, worst-case size bounds, and stream introspection in bzip2.zig.
+keywords: zig compress function, zig decompress, maxCompressedSize, blockSizeOfStream, file helpers
+---
+
+# Compress and Decompress
 
 ## compress
 

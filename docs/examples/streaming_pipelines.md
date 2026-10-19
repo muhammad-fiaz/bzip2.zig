@@ -1,3 +1,9 @@
+---
+title: Streaming Pipelines
+description: Bind a source reader to a sink writer through the bzip2.zig streaming entry points, in both directions, in constant memory.
+keywords: streaming example, reader writer pipeline, constant memory, incremental
+---
+
 # Streaming Pipelines
 
 Binds a source reader to a sink writer through the streaming entry points, in

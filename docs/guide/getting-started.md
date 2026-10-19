@@ -1,3 +1,9 @@
+---
+title: Getting Started
+description: Install bzip2.zig in a Zig 0.17 project and compress and decompress your first buffer with the one-shot entry points.
+keywords: zig bzip2 getting started, zig compression tutorial, zig fetch, build.zig.zon, first program
+---
+
 # Getting Started
 
 ## Requirements

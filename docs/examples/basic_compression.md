@@ -1,3 +1,9 @@
+---
+title: Basic Compression
+description: A minimal bzip2.zig program — compress a string, read the header back, decompress and verify.
+keywords: zig bzip2 example, compress string, hello world, one-shot
+---
+
 # Basic Compression
 
 Compresses a string and reads the header back.

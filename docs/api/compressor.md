@@ -1,3 +1,9 @@
+---
+title: Compressor
+description: "The reusable Compressor type: incremental BZip2 encoding into any std.Io.Writer with an allocator you choose."
+keywords: zig compressor, incremental compression, std.Io.Writer, streaming encoder, reusable context
+---
+
 # Compressor
 
 ```zig

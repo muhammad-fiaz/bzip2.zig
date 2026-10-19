@@ -1,3 +1,9 @@
+---
+title: Options
+description: CompressionOptions — the level field, its default, and what the level controls in the encoded stream.
+keywords: compression options, compression level, block size, defaults
+---
+
 # Options
 
 ## CompressionOptions

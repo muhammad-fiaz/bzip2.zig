@@ -3,7 +3,7 @@ import { defineConfig } from "vitepress";
 export const SITE_URL = "https://muhammad-fiaz.github.io/bzip2.zig";
 export const SITE_NAME = "bzip2.zig";
 export const SITE_DESCRIPTION =
-  "A native Zig implementation of the BZip2 format. Explicit allocators and I/O, streaming and whole-file entry points, and CRC verification on every stream.";
+  "The pure-Zig BZip2 codec: standard .bz2 files in and out, zero dependencies, no C library, caller-owned memory and I/O, and CRC verification on every stream.";
 
 export const GA_ID = "G-6BVYCRK57P";
 export const GTM_ID = "GTM-P4M9T8ZR";
@@ -123,7 +123,9 @@ gtag('config', '${GA_ID}');`,
   transformPageData(pageData: any) {
     const isHome = pageData.relativePath === "index.md";
     const pageTitle = pageData.title || (isHome ? "Native BZip2 Compression and Decompression for Zig" : SITE_NAME);
-    const fullTitle = `${pageTitle} | ${SITE_NAME}`;
+    // The home page carries its own brand title; the ":title | bzip2.zig"
+    // template would render it as "bzip2.zig | bzip2.zig".
+    const fullTitle = isHome ? pageTitle : `${pageTitle} | ${SITE_NAME}`;
     const pageDescription = pageData.frontmatter.description || pageData.description || SITE_DESCRIPTION;
     const pageKeywords = pageData.frontmatter.keywords
       ? `${pageData.frontmatter.keywords}, ${KEYWORDS}`

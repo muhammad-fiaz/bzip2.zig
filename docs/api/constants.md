@@ -1,3 +1,9 @@
+---
+title: Constants
+description: Version strings, stream limits, and the magic numbers bzip2.zig exposes for introspection.
+keywords: bzip2 constants, version string, stream limits, magic number
+---
+
 # Constants
 
 ## Version

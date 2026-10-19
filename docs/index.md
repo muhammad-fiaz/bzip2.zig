@@ -1,10 +1,14 @@
 ---
 layout: home
+title: bzip2.zig — The Pure-Zig BZip2 Codec
+titleTemplate: false
+description: "The pure-Zig BZip2 codec: standard .bz2 files in and out, zero dependencies, no C library, caller-owned memory and I/O, and CRC verification on every stream."
+keywords: bzip2.zig, zig bzip2, pure-zig compression, .bz2, native codec
 
 hero:
   name: bzip2.zig
-  text: BZip2 for Zig
-  tagline: Native compression and decompression, with explicit allocators and bounded memory.
+  text: The Pure-Zig BZip2 Codec
+  tagline: Standard .bz2 files, bounded memory, and caller-owned allocators and I/O — nothing hidden, nothing linked.
   actions:
     - theme: brand
       text: Get Started
@@ -17,7 +21,7 @@ hero:
       link: https://github.com/muhammad-fiaz/bzip2.zig
 
 features:
-  - title: Complete format support
+  - title: Standard .bz2, both directions
     details: Levels 1 through 9, multi-block streams, the full symbol map, multiple Huffman tables per block, and the legacy randomised block flag. Output is accepted by every BZip2 implementation, and their output is accepted here.
   - title: Bounded memory
     details: The encoder and decoder each hold one block at a time. Streaming and whole-file entry points use the same fixed footprint whether the input is a kilobyte or a terabyte.

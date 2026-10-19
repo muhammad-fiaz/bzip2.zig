@@ -1,3 +1,9 @@
+---
+title: Decompressor
+description: Decoder, DecoderOwnedScratch and Scratch — incremental BZip2 decoding through any std.Io.Reader, with CRC verification built in.
+keywords: zig decoder, incremental decompression, std.Io.Reader, scratch buffers, crc verification
+---
+
 # Decompressor
 
 Three types cover decoding. They do the same work and differ only in who owns

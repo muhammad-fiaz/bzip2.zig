@@ -1,3 +1,9 @@
+---
+title: Memory and Allocators
+description: "How bzip2.zig allocates: caller-supplied allocators, bounded per-call scratch memory, and no global state anywhere."
+keywords: zig allocator, memory usage, scratch buffer, arena allocator, no global state
+---
+
 # Memory and Allocators
 
 The library never allocates from a global. Every entry point that needs memory

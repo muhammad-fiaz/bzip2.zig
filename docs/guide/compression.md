@@ -1,3 +1,9 @@
+---
+title: Compression
+description: Choose a compression level, understand block sizes and scratch memory, and bound worst-case output with maxCompressedSize.
+keywords: zig bzip2 compression level, block size, maxCompressedSize, scratch memory, level 9
+---
+
 # Compression
 
 ## Choosing a level

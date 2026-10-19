@@ -1,4 +1,10 @@
-﻿# Streaming
+﻿---
+title: Streaming
+description: Stream BZip2 compression and decompression through std.Io.Reader and std.Io.Writer in constant memory.
+keywords: zig streaming compression, std.Io.Reader, std.Io.Writer, incremental, constant memory
+---
+
+# Streaming
 
 Every entry point that moves bytes between the codec and a caller works through
 `std.Io.Reader` and `std.Io.Writer`. Nothing in the library opens a file, reads
