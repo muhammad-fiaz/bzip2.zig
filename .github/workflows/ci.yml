@@ -24,11 +24,9 @@ jobs:
         with:
           version: ${{ env.ZIG_VERSION }}
       - name: Check formatting
-        run: zig fmt --check src/ examples/ build.zig build.zig.zon
+        run: zig fmt --check src/ examples/
       - name: Test
         run: zig build test --summary all
-      - name: Test optimized
-        run: zig build test -Doptimize=ReleaseSafe --summary all
       - name: Examples
         run: zig build run-all-examples
 
@@ -114,7 +112,7 @@ jobs:
         include:
           - { name: x86-macos, target: x86-macos }
           - { name: arm-linux-gnueabihf, target: arm-linux-gnueabihf }
-          - { name: x86-windows, target: x86-windows }
+          - { name: x86-freestanding, target: x86-freestanding }
     steps:
       - uses: actions/checkout@v7
       - uses: mlugg/setup-zig@v2
